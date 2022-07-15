@@ -1,0 +1,29 @@
+<%- include("head") -%>
+
+<h1 class="text-center mt-3 mb-3">Appointment Booking</h1>
+<div style="margin:auto" class="container row text-center d-flex justify-content-center">
+<% for(var i=0;i<doctors.length;i++){ %>
+    
+    <div class="card d-inline-block  m-3 border border-dark text-center col-lg-4 col-md-6" style="width: 18rem;border-radius:15px">
+        <div class="card-body bold">
+            <i class="fas fa-user-tie user text-center m-3"></i>
+          <h5 class="card-title bold align-left mt-2"><span class="text-danger">Name</span>: <%= doctors[i].name %></h5>
+          
+          <p class="card-text align-left"><span class="text-danger">Qualification</span>: <%= doctors[i].qualification %></p>
+          <p class="card-text align-left"><span class="text-danger">Speciality</span>: <%= doctors[i].speciality %></p>
+          <p class="card-text align-left"><span class="text-danger">Experience</span>: <%= doctors[i].experience %> Years</p>
+            
+          <% if(doctors[i].availableToday){ %>
+            <p class="text-success align-left big-3"> Available Now  ✔</p>
+            <a href="/emailVerify?id=<%= doctors[i]._id %>" class="btn btn-success btn-lg">Book Appointment</a>
+          
+      <% }else{ %>
+        <p class="text-danger info-text align-left big-3">Not Available ❌</p>
+        
+      <% } %>
+        </div>
+      </div>
+<% } %>
+</div>
+
+<%- include("footer") -%>

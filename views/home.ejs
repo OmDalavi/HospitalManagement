@@ -1,0 +1,101 @@
+<%- include("head") -%>
+    <marquee class="mt-3 big-4 mb-2 text-success">Welcome to <b>MaxCare Multispeciality Hospital .</b> MaxCare Wishes you Happy & Healthy Life</marquee>
+    <% if(typeof message!='undefined'){ %>
+      <% if(message==0){ %>
+          <div class="alert alert-danger mt-3 bold text-center" role="alert">
+              Wrong OTP. Email Could Not Be Verified.
+          </div>  
+      <% }else if(message==1){ %>
+        <div class="alert alert-info mt-3 bold text-center" role="alert">
+          Your Appointment is <span class="text-danger">pending</span> for approval. After getting approved, you will be notified by mail with your time-slot to visit the hospital.
+      </div>  
+      <% } %>
+    <% } %>
+      
+            <div class="container text-center mb-3">
+                <div class="card m-2 d-inline-block" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/home/1.jpg" alt="Card image cap">
+                    <div class="card-body align-left">
+                      <h5 class="card-title bold big-3">Book Doctor Appointment</h5>
+                      <p class="card-text bold-2 ">Booking an Appointment with your doctor/specialist is now easier than ever. You can book an appointment with doctors from various specializations. No more waiting on the phone for hours. Now you can book an appointment online from anywhere, anytime.</p>
+                      <a href="#" class="btn btn-primary btn-lg">Explore More</a>
+                    </div>
+                </div>
+                <div class="card m-2 d-inline-block" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/home/2.jpg" alt="Card image cap">
+                    <div class="card-body align-left">
+                      <h5 class="card-title bold big-3">Sample Collection Immediately</h5>
+                      <p class="card-text bold-2">Sample collection is done by our acclaimed Lab Service. We arrange home pick up of blood & urine samples to detect problems arising due to lifestyle issues or any underlying diseases before they happen. You can schedule a pick up or a direct visit to our labs.</p>
+                      <a href="#" class="btn btn-primary btn-lg">Explore More</a>
+                    </div>
+                </div>
+                <div class="card m-2 d-inline-block" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/home/4.jpg" alt="Card image cap">
+                    <div class="card-body align-left">
+                      <h5 class="card-title bold big-3">Virtual Clinic and Consultation</h5>
+                      <p class="card-text bold-2">The recent Covid-19 pandemic and the corresponding lockdowns have created have left a lot of patients in need of medical attention unattended.So we launch our online consultation to cover those customers who need immediate medical attention.</p>
+                      <a href="#" class="btn btn-primary btn-lg">Explore More</a>
+                    </div>
+                </div>
+                <div class="card m-2 d-inline-block" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/home/5.jpg" alt="Card image cap">
+                    <div class="card-body align-left">
+                      <h5 class="card-title bold big-3">Blood Bank Available 24/7</h5>
+                      <p class="card-text bold-2">We are committed to provide Right blood component to Right patient at the Right time in the Right quantity. The Blood Bank gives service 24 hours a day and 365 days a year. It’s well equipped with all the latest and advanced equipments required.</p>
+                      <a href="#" class="btn btn-primary btn-lg">Explore More</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="container text-center mt-5 mb-5">
+                <p class="big-6 text-center mt-4 bold">Why MaxCare ?</p>
+            <div class="container row">
+             
+                    <div class="bold big-2 col-lg-4 col-md-6 mt-3 text-success"><li>Patient-Centric Approach</li></div>
+                    <div class="bold big-2 col-lg-4 col-md-6 mt-3 text-success"><li>Focused Leadership</li></div>
+                    <div class="bold big-2 col-lg-4 col-md-6 mt-3 text-success"><li>Cutting-Edge Technology</li></div>
+                    <div class="bold big-2 col-lg-4 col-md-6 mt-3 text-success"><li>Transparent Pricing</li></div>
+                    <div class="bold big-2 col-lg-4 col-md-6 mt-3 text-success"><li>Coordinated Care</li></div>
+         
+            </div>
+            </div>
+
+
+
+            <p class="big-6 text-center mt-4 bold">Our Management</p>
+
+            <div class="container text-center">
+                <div class="card d-inline-block border-danger mt-3" style="width: 18rem;border-radius:15px">
+                    <i class="fas fa-user-tie user text-center m-3"></i>
+                    <div class="card-body align-center">
+                      <h5 class="card-title bold big-3">Dr.Andrew Ng</h5>
+                      <p class="card-text bold">Director, MaxCare</p>
+                  
+                    </div>
+                  </div>
+                  <div class="card d-inline-block ms-3 me-3 border-danger mt-3" style="width: 18rem;border-radius:15px">
+                    <i class="fas fa-user-tie user text-center m-3"></i>
+                    <div class="card-body align-center">
+                      <h5 class="card-title bold big-3">Dr.Saina Agarwal</h5>
+                      <p class="card-text bold">CEO & President, MaxCare</p>
+                  
+                    </div>
+                  </div>
+                  <div class="card d-inline-block border-danger mt-3" style="width: 18rem;border-radius:15px">
+                    <i class="fas fa-user-tie user text-center m-3"></i>
+                    <div class="card-body align-center">
+                      <h5 class="card-title bold big-3">Dr.Piyush Bansal</h5>
+                      <p class="card-text bold">COO, MaxCare</p>
+                  
+                    </div>
+                  </div>
+                  
+                  
+            </div>
+            
+          
+
+
+
+<%- include("footer") -%>

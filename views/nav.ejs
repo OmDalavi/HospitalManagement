@@ -1,0 +1,77 @@
+<nav class="bold navbar p-2 navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <img class="me-3 border border-danger" style="width:50px;border-radius:50px" src="../images/maxcare.png">
+    <a class="navbar-brand" href="#">MaxCare Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+
+        <% if(typeof locals.username !=='undefined' ){ %>
+            <% if(typeof locals.staffid == 'undefined'){ %>
+              <li class="nav-item ms-4">
+           
+                <a class="nav-link active"><%= locals.username %></a>
+             
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/dashboardDoctor">Dashboard</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/logoutDoctor">Logout</a>
+            </li>
+            <% }else if(typeof locals.doctorid == 'undefined'){ %>
+              <li class="nav-item ms-4">
+           
+                <a class="nav-link active"><%= locals.username %></a>
+             
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/registerStaff">New Staff Registration</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/registerDoctor">New Doctor Registration</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/adminAppointments">Appointments</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/logout">Logout</a>
+            </li>
+            <% } %>
+          <% }else{ %>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" aria-current="page" href="/appointment">Book Appointment</a>
+            </li>
+            
+              
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/doctors">Doctors</a>
+            </li>
+           
+            
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/login">Admin Login</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="/loginDoctor">Doctor Login</a>
+            </li>
+            <% } %>
+
+      </ul>
+
+
+
+    </div>
+  </div>
+</nav>

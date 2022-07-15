@@ -1,0 +1,30 @@
+<%- include("head") -%>
+    <p class="mt-3 mb-3 text-center big-5 bold">Our Doctors</p>
+    
+
+        <div style="margin:auto" class="container row text-center d-flex justify-content-center">
+            <% for(var i=0;i<doctors.length;i++){ %>
+            
+                <div class="card d-inline-block p-1 m-3 border border-dark text-center col-lg-4 col-md-6" style="width: 18rem;border-radius:15px">
+                    <div class="card-body bold">
+                        <i class="fas fa-user-tie user text-center m-3"></i>
+                      <h5 class="card-title bold align-left mt-2"><span class="text-danger">Name</span>: <%= doctors[i].name %></h5>
+                      
+                      <p class="card-text align-left"><span class="text-danger">Qualification</span>: <%= doctors[i].qualification %></p>
+                      <p class="card-text align-left"><span class="text-danger">Speciality</span>: <%= doctors[i].speciality %></p>
+                      <p class="card-text align-left"><span class="text-danger">Experience</span>: <%= doctors[i].experience %> Years</p>
+                        
+                    </div>
+                  </div>
+            <% } %>
+        </div>
+
+    
+      
+            
+            
+          
+
+
+
+<%- include("footer") -%>

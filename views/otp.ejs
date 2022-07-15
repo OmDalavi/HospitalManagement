@@ -1,0 +1,21 @@
+<%- include("head") -%>
+
+    
+    <div class="container text-center mt-5">
+        <form class="" action="/otp" method="post">
+            <img class="me-2 border border-dark" style="width:90px;border-radius:50px" src="../images/maxcare.png">
+            <p class="big-3 bold mt-2 mb-4">Email Verification </p>
+            
+            <input class="form input form-control bold" type="number" name="otp" placeholder="Enter OTP" required>
+            <input class="form input form-control bold" type="hidden" name="doctorid"  value="<%= doctorid %>" required>
+            <input class="form input form-control bold" type="hidden" name="email"  value="<%= email %>" required>
+            
+            
+            <button class="btn btn-success mt-4 btn-lg form bold">Verify Email</button>
+            
+       
+            
+        </form>
+    </div>
+
+<%- include("footer") -%>

@@ -1,0 +1,26 @@
+<%- include("head") -%>
+
+    
+    <div class="container text-center mt-5">
+        <form class="" action="/appointmentApproval" method="post">
+            <img class="me-2 border border-dark" style="width:90px;border-radius:50px" src="../images/maxcare.png">
+   
+            <p class="big-3 bold mt-2 mb-4">Appointment Booking</p>
+            
+            <input class="form input form-control bold" type="text" name="name" placeholder="Enter Your Name" required>
+            
+            <input class="bold mt-3" type="radio" name="type" value="Physical" required>
+            Physical
+            <input class="bold ms-3" type="radio" name="type" value="Virtual" required>
+            Virtual
+            <input class="form input form-control bold mt-3" type="text" name="email" value="<%= email %>" required readonly>
+            <input class="form input form-control mt-3 bold" type="text" name="doctorid" placeholder="doctorid" value="<%= doctorid %>" required readonly>
+            
+            <button class="btn btn-success mt-4 btn-lg form bold">Send For Approval</button>
+            
+       
+            
+        </form>
+    </div>
+
+<%- include("footer") -%>

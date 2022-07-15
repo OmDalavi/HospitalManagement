@@ -1,0 +1,45 @@
+<%- include("head") -%>
+
+    <h1 class="text-center mt-3 mb-3">All Appointments Today</h1>
+    <div style="margin:auto" class="container row text-center d-flex justify-content-center">
+        <% for(var i=0;i<appointments.length;i++){ %>
+
+            <div class="card d-inline-block  m-3 border border-dark text-center col-lg-4 col-md-6"
+                style="width: 18rem;border-radius:15px">
+                <div class="card-body bold">
+
+                    <h5 class="card-title bold align-left mt-2"><span class="text-danger">Name</span>: <%=
+                            appointments[i].name %>
+                    </h5>
+
+                    <p class="card-text align-left"><span class="text-danger">Email</span>: <%= appointments[i].email %>
+                    </p>
+                    <p class="card-text align-left"><span class="text-danger">Date</span>: <%= appointments[i].date %>
+                    </p>
+                    <p class="card-text align-left"><span class="text-danger">DoctorID</span>: <%=
+                            appointments[i].doctorid %>
+                    </p>
+                    <p class="card-text align-left"><span class="text-danger">Type</span>: <%= appointments[i].type %>
+                    </p>
+
+
+                    <% if(appointments[i].status==1){ %>
+                        <p class="text-success align-left big-3"> Approved ✔</p>
+                    <% }else{ %>
+                            <% if(appointments[i].action==0){ %>
+                                <p class="text-danger info-text align-left big-3">Pending For Approval</p>
+                                <a class="btn btn-success btn-lg"
+                                href="/handleAppointment?id=<%= appointments[i]._id %>&action=approve&email=<%= appointments[i].email %>">Approve</a>
+                                <a class="btn btn-danger btn-lg mt-3"
+                                href="/handleAppointment?id=<%= appointments[i]._id %>&action=decline&email=<%= appointments[i].email %>">Decline</a>
+                            <% }else{ %>
+                                <p class="text-danger info-text align-left big-3">Declined ❌</p>
+                            <% } %>
+
+                    <% } %>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+    <%- include("footer") -%>

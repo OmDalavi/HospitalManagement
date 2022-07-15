@@ -1,0 +1,81 @@
+body{
+    /* font-family: 'Permanent Marker.cursive'; */
+    font-family: 'montserrat', serif;
+}
+.bold{
+    font-weight:900;
+}
+.bold-2{
+    font-weight:600;
+}
+.big-1{
+    font-size:19px;
+}
+.big-2{
+    font-size:25px;
+}
+.big-3{
+    font-size:28px;
+}
+.big-4{
+    font-size:32px;
+}
+.big-5{
+    font-size:35px;
+}
+.big-6{
+    font-size:38px;
+}
+
+.card-img-top{
+    width:287px;
+    height:300px;
+    
+}
+.align-left{
+    text-align:left;
+}
+.align-right{
+    text-align:right;
+}
+.align-center{
+    text-align:center;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+a:hover{
+    color:red;
+}
+ul{
+    list-style-type: none;
+}
+.social-icon{
+    font-size:30px;
+    transition:font-size 100ms;
+
+}
+.social-icon:hover{
+    font-size:40px;
+}
+.user{
+    font-size:100px;
+    
+}
+
+.form{
+    margin:auto;
+    width:25%;
+
+    
+}
+@media(max-width:1100px){
+    .form{
+        width:85%;
+    }
+}
+.timeout{
+    display:float;
+    float:bottom;
+}

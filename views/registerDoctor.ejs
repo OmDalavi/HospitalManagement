@@ -1,0 +1,39 @@
+<%- include("head") -%>
+<% if(typeof message !== 'undefined'){ %>
+    <% if(message==0){ %>
+         <div class="alert alert-danger mt-3 bold text-center" role="alert">
+             Doctor ID Already Registered !
+         </div>  
+    <% }else if(message==2){ %>
+         <div class="alert alert-success mt-3 bold text-center" role="alert">
+             Doctor Registration Successfull !
+         </div>
+     <% }else if(message==1){ %>
+        <div class="alert alert-danger mt-3 bold text-center" role="alert">
+            Passwords Dont Match
+        </div>
+    <% } %>
+ <% } %>
+<div class="container text-center mt-5">
+    <form class="" action="/registerDoctor" method="post">
+        <img class="me-2 border border-dark" style="width:90px;border-radius:50px" src="../images/maxcare.png">
+        <p class="big-3 bold mt-2 mb-4">MaxCare Doctor Registration</p>
+ 
+        <input class="form input form-control mt-3" type="text" name="name" placeholder="New Doctor Name" required>
+        <input class="form input form-control mt-3" type="text" name="doctorid" placeholder="Enter Doctor ID" required>
+        <input class="form input form-control mt-3" type="text" name="password" placeholder="Create Password" required>
+        <input class="form input form-control mt-3" type="text" name="cpassword" placeholder="Repeat Password" required>
+        <input class="form input form-control mt-3" type="text" name="qualification" placeholder="Enter Qualification" required>
+        <input class="form input form-control mt-3" type="text" name="speciality" placeholder="Speciality" required>
+        <input class="form input form-control mt-3" type="number" name="experience" placeholder="Experience In Years" required>
+
+       
+
+        <button class="btn btn-dark mt-4 btn-lg form">Register</button>
+        
+   
+        
+    </form>
+</div>
+
+<%- include("footer") -%>

@@ -1,0 +1,30 @@
+<%- include("head") -%>
+<% if(typeof message !== 'undefined'){ %>
+    <% if(message==0){ %>
+         <div class="alert alert-danger mt-3 bold text-center" role="alert">
+             User Not Found ! Kindly Contact IT Department For New Registration.
+         </div>  
+     <% }else if(message==1){ %>
+         <div class="alert alert-danger mt-3 text-center bold" role="alert">
+             Wrong Password !
+         </div>
+         
+     <% } %>
+ <% } %>
+<div class="container text-center mt-5">
+    <form class="" action="/login" method="post">
+        <img class="me-2 border border-dark" style="width:90px;border-radius:50px" src="../images/maxcare.png">
+        <p class="big-3 bold mt-2 mb-4">MaxCare Admin Login</p>
+        <input  class="form input form-control" type="text" name="staffid" placeholder="Staff ID" required>
+      
+        <input  class="form input form-control mt-3" type="password" name="password" placeholder="Enter Password" required>
+        
+        
+        <button class="btn btn-dark mt-4 btn-lg form">Login</button>
+        
+    
+     
+    </form>
+</div>
+
+<%- include("footer") -%>

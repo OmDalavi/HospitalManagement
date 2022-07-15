@@ -1,0 +1,38 @@
+<%- include("head") -%>
+<% if(typeof message !== 'undefined'){ %>
+    <% if(message==0){ %>
+         <div class="alert alert-danger mt-3 bold text-center" role="alert">
+             Staff ID Already Registered !
+         </div>  
+     <% }else if(message==1){ %>
+         <div class="alert alert-danger mt-3 bold text-center" role="alert">
+             Passwords Dont Match !
+         </div>
+     <% }else if(message==2){ %>
+         <div class="alert alert-success mt-3 bold text-center" role="alert">
+             Staff Registration Successfull !
+         </div>
+     <% } %>
+ <% } %>
+<div class="container text-center mt-5">
+    <form class="" action="/registerStaff" method="post">
+        <img class="me-2 border border-dark" style="width:90px;border-radius:50px" src="../images/maxcare.png">
+        <p class="big-3 bold mt-2 mb-4">MaxCare Admin Registration</p>
+ 
+        <input class="form input form-control" type="text" name="name" placeholder="New Employee Name" required>
+        <input class="form input form-control mt-3" type="text" name="staffid" placeholder="Staff ID" required>
+        
+        <input class="form input form-control mt-3" type="password" name="password" placeholder="Create Password" required>
+        <input class="form input form-control mt-3" type="password" name="cpassword"
+            placeholder="Confirm Your Password" required>
+
+       
+
+        <button class="btn btn-dark mt-4 btn-lg form">Register</button>
+        
+   
+        
+    </form>
+</div>
+
+<%- include("footer") -%>
